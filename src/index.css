@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Prestigious University Palette */
+  --color-navy: #070F1E;
+  --color-navy-deep: #0D1A30;
+  --color-navy-royal: #122240;
+  --color-green-natural: #2E5844;
+  --color-green-deep: #1A382B;
+  --color-gold: #C5A059;
+  --color-gold-light: #E5C782;
+  --color-gold-burnished: #9E7D3B;
+  --color-ivory: #F9F7F2;
+  --color-ivory-warm: #F2EDE2;
+  --color-text-dark: #121A26;
+  --color-text-muted: #5A6475;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #121A26;
+    background-color: #F9F7F2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Subtle University Crest Watermark & Texture */
+.bg-university-mesh {
+  background-color: #070F1E;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(197, 160, 89, 0.08) 0px, transparent 55%),
+    radial-gradient(at 85% 85%, rgba(30, 62, 47, 0.18) 0px, transparent 55%);
+}
+
+.card-university {
+  background: #FFFFFF;
+  border: 1px solid rgba(197, 160, 89, 0.22);
+  box-shadow: 0 4px 20px -2px rgba(7, 15, 30, 0.05);
+}
+
+.card-university-dark {
+  background: #0D1A30;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
